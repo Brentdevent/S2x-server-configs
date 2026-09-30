@@ -25,7 +25,9 @@ Call of Duty WWII/
 ## Configuration
 
 - Change `sv_hostname` to set the displayed server name.
-- Keep `sv_maxclients` and `party_maxplayers` equal. Multiplayer supports up to 18 players; Zombies supports up to 4.
+- Keep `sv_maxclients` and `sv_maxplayers` equal. Multiplayer supports up to 18 players; Zombies supports up to 4.
+- `sv_minplayers` sets how many players the server waits for, capped at `sv_maxplayers`.
+- Migrate existing configs from `party_maxplayers`/`party_minplayers` to `sv_maxplayers`/`sv_minplayers`; the stock game swallows sets on the old names. Use an S2x build with the dedicated player-limit fix.
 - `party_matchStartDelay` controls the delay before a match starts.
 - Edit `sv_maprotation` to select maps and gametypes. The config files contain the available names and examples.
 - Gametype-specific rules such as score limits, time limits, rounds, and respawn delays are documented in each config.
